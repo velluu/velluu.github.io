@@ -47,7 +47,7 @@ footer a{color:var(--fg)}
 <h2>Research</h2>
 
 <article>
-<h3>Soft conditioning for structured illumination microscopy</h3>
+<h3 id="sim">Soft conditioning for structured illumination microscopy</h3>
 <p class="meta">Optical Nanoscopy Group, UiT The Arctic University of Norway. June 2026 to present. Co-supervised by Dr. Ankit Butola, PI Prof. Balpreet Singh Ahluwalia.</p>
 <p>Deep learning reconstruction for structured illumination microscopy on the BioSR dataset. I benchmarked 16 architectures and found reconstruction quality plateaus at the same level across all of them, which moved the question away from architecture search and toward what the input actually carries.</p>
 <p>The main result is a controlled one. Adding a classical Wiener reconstruction as an extra input channel improves held-out-cell PSNR by <span class="num">+0.52 dB</span> on clathrin-coated pits, <span class="num">+2.62</span> on microtubules, <span class="num">+1.17</span> on F-actin and <span class="num">+1.13</span> on endoplasmic reticulum, measured against an architecture-matched sham control with identical parameter count and initial state. All 37 held-out cells improve. The comparison was preregistered before unblinding and Holm-corrected.</p>
@@ -55,7 +55,7 @@ footer a{color:var(--fg)}
 </article>
 
 <article>
-<h3>Behavioural side effects of refusal-direction ablation</h3>
+<h3 id="ablation">Behavioural side effects of refusal-direction ablation</h3>
 <p class="meta">Independent. August 2026 to present.</p>
 <p>Removing an open-weights model's refusal direction is a safety-relevant intervention with side effects nobody has to report. I built a 20-scenario tool-use evaluation with adversarial schema traps, a predeclared pass rule, and a stock-model control arm served on an identical configuration, then measured what changes.</p>
 <p>When a user instruction conflicts with a tool schema, the ablated model obeys the user in <span class="num">3 of 80</span> trials. The stock model never does across <span class="num">192</span> attempts and instead declines to act in <span class="num">8 of 200</span> trials. Fisher exact, one-sided, <span class="num">p = 0.025</span>. The two arms resolve the same conflict in opposite directions at roughly the same rate. Recovery after an injected error does not separate them, <span class="num">297 of 300</span> against <span class="num">300 of 300</span> at <span class="num">p = 0.12</span>, and I report that as the null it is.</p>
@@ -65,7 +65,7 @@ footer a{color:var(--fg)}
 <h2>Competition</h2>
 
 <article>
-<h3>2026 Universal Cup Summer Online Challenge</h3>
+<h3 id="ucup">2026 Universal Cup Summer Online Challenge</h3>
 <p class="meta">Sponsored by Huawei. Individual entry. Rank <span class="num">20 of 618</span>, <a href="https://challenge.ucup.ac/contest/6a34e3642e7c341f7f0a5dee/scoreboard?all=1">public scoreboard</a>.</p>
 <p>Predict received signal strength at unmeasured locations from base-station parameters, a UAV 3D point cloud and sparse field samples. The move that mattered was measuring the label noise floor first, about <span class="num">3.0 dB</span> from <span class="num">9.0 million</span> same-cell repeat pairs, which told me how much of the remaining error was reducible at all before I spent any time trying to reduce it. Validated leave-cells-out. A solution report and reproduction package went to the organisers.</p>
 </article>
@@ -73,9 +73,22 @@ footer a{color:var(--fg)}
 <h2>Earlier</h2>
 
 <article>
-<h3>AirfoilAI</h3>
+<h3 id="airfoilai">AirfoilAI</h3>
 <p class="meta">December 2025. Co-authored with James Joshua Koshy. <a href="https://github.com/velluu/AirfoilAI">Repository</a>.</p>
 <p>Nine regression models benchmarked on the AirfRANS CFD dataset for lift-to-drag prediction on NACA 4-digit airfoils. Best MLP reached <span class="num">R² 0.991</span>.</p>
+</article>
+
+
+<h2 id="reports">Reports and code</h2>
+
+<article>
+<p class="meta">What exists, who wrote it, and where it went.</p>
+<ul>
+<li><strong>Solution report, 2026 Universal Cup Summer Online Challenge.</strong> Sole author. Eleven pages plus a reproduction package, submitted to the challenge organisers. Result is checkable on the <a href="https://challenge.ucup.ac/contest/6a34e3642e7c341f7f0a5dee/scoreboard?all=1">public scoreboard</a>, rank 20 of 618. <a href="#ucup">What it covers</a>.</li>
+<li><strong>Two internship reports, Optical Nanoscopy Group, UiT.</strong> Sole author, thirteen pages for the final one. Internal to the group. <a href="#sim">What they cover</a>.</li>
+<li><strong>Refusal-direction ablation study.</strong> Independent, ongoing. Evaluation harness and analysis are private. <a href="#ablation">What was measured</a>.</li>
+<li><strong>AirfoilAI.</strong> Equal primary co-contributor with James Joshua Koshy. Public repository at <a href="https://github.com/velluu/AirfoilAI">github.com/velluu/AirfoilAI</a>. <a href="#airfoilai">What it covers</a>.</li>
+</ul>
 </article>
 
 <footer>

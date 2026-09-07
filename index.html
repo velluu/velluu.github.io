@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karthik Nambiar</title>
+<meta name="description" content="Karthik Nambiar. Empirical machine learning research: evaluation design, controlled measurement, inverse imaging problems.">
+<style>
+:root{
+  --bg:#fdfcfa; --fg:#1c1b19; --muted:#6b6862; --rule:#e2ded6; --link:#7a3b2e;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#16151a; --fg:#e0def4; --muted:#908caa; --rule:#2a2836; --link:#ebbcba; }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  -webkit-font-smoothing:antialiased;
+}
+main{max-width:46rem; margin:0 auto; padding:4.5rem 1.5rem 6rem}
+h1{font-size:1.55rem; font-weight:600; letter-spacing:.01em; margin:0 0 .35rem}
+.sub{color:var(--muted); margin:0 0 2.6rem; font-size:.98rem}
+h2{
+  font-size:.78rem; font-weight:600; text-transform:uppercase; letter-spacing:.13em;
+  color:var(--muted); margin:3rem 0 1rem; padding-bottom:.5rem; border-bottom:1px solid var(--rule);
+}
+h3{font-size:1.02rem; font-weight:600; margin:0 0 .15rem}
+.meta{color:var(--muted); font-size:.9rem; margin:0 0 .55rem}
+article{margin-bottom:2.1rem}
+p{margin:0 0 .8rem}
+a{color:var(--link); text-decoration:none; border-bottom:1px solid var(--rule)}
+a:hover{border-bottom-color:var(--link)}
+ul{margin:0; padding-left:1.1rem}
+li{margin-bottom:.4rem}
+.num{font-variant-numeric:tabular-nums}
+footer{margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.92rem}
+footer a{color:var(--fg)}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Karthik Nambiar</h1>
+<p class="sub">Computer science undergraduate at IIT Delhi Abu Dhabi. I run controlled experiments on machine learning systems and I care most about whether a measurement means what it claims to mean.</p>
+
+<h2>Research</h2>
+
+<article>
+<h3>Soft conditioning for structured illumination microscopy</h3>
+<p class="meta">Optical Nanoscopy Group, UiT The Arctic University of Norway. June 2026 to present. Co-supervised by Dr. Ankit Butola, PI Prof. Balpreet Singh Ahluwalia.</p>
+<p>Deep learning reconstruction for structured illumination microscopy on the BioSR dataset. I benchmarked 16 architectures and found reconstruction quality plateaus at the same level across all of them, which moved the question away from architecture search and toward what the input actually carries.</p>
+<p>The main result is a controlled one. Adding a classical Wiener reconstruction as an extra input channel improves held-out-cell PSNR by <span class="num">+0.52 dB</span> on clathrin-coated pits, <span class="num">+2.62</span> on microtubules, <span class="num">+1.17</span> on F-actin and <span class="num">+1.13</span> on endoplasmic reticulum, measured against an architecture-matched sham control with identical parameter count and initial state. All 37 held-out cells improve. The comparison was preregistered before unblinding and Holm-corrected.</p>
+<p>Along the way I found that the UniFMIR evaluation protocol trains across all BioSR cells, which overstates how well these models generalise to cells they have not seen. Everything above is validated leave-cells-out instead.</p>
+</article>
+
+<article>
+<h3>Behavioural side effects of refusal-direction ablation</h3>
+<p class="meta">Independent. August 2026 to present.</p>
+<p>Removing an open-weights model's refusal direction is a safety-relevant intervention with side effects nobody has to report. I built a 20-scenario tool-use evaluation with adversarial schema traps, a predeclared pass rule, and a stock-model control arm served on an identical configuration, then measured what changes.</p>
+<p>When a user instruction conflicts with a tool schema, the ablated model obeys the user in <span class="num">3 of 80</span> trials. The stock model never does across <span class="num">192</span> attempts and instead declines to act in <span class="num">8 of 200</span> trials. Fisher exact, one-sided, <span class="num">p = 0.025</span>. The two arms resolve the same conflict in opposite directions at roughly the same rate. Recovery after an injected error does not separate them, <span class="num">297 of 300</span> against <span class="num">300 of 300</span> at <span class="num">p = 0.12</span>, and I report that as the null it is.</p>
+<p>The part I learned most from was the harness. Three errors in it, including a decode fault that had been scored as a model failure, and a pass rule that the stock control itself violated 5 times in 94 runs, which retired the rule rather than the model.</p>
+</article>
+
+<h2>Competition</h2>
+
+<article>
+<h3>2026 Universal Cup Summer Online Challenge</h3>
+<p class="meta">Sponsored by Huawei. Individual entry. Rank <span class="num">20 of 618</span>, <a href="https://challenge.ucup.ac/contest/6a34e3642e7c341f7f0a5dee/scoreboard?all=1">public scoreboard</a>.</p>
+<p>Predict received signal strength at unmeasured locations from base-station parameters, a UAV 3D point cloud and sparse field samples. The move that mattered was measuring the label noise floor first, about <span class="num">3.0 dB</span> from <span class="num">9.0 million</span> same-cell repeat pairs, which told me how much of the remaining error was reducible at all before I spent any time trying to reduce it. Validated leave-cells-out. A solution report and reproduction package went to the organisers.</p>
+</article>
+
+<h2>Earlier</h2>
+
+<article>
+<h3>AirfoilAI</h3>
+<p class="meta">December 2025. Co-authored with James Joshua Koshy. <a href="https://github.com/velluu/AirfoilAI">Repository</a>.</p>
+<p>Nine regression models benchmarked on the AirfRANS CFD dataset for lift-to-drag prediction on NACA 4-digit airfoils. Best MLP reached <span class="num">R² 0.991</span>.</p>
+</article>
+
+<footer>
+<a href="mailto:24a1cseb0015@iitdabudhabi.ac.ae">24a1cseb0015@iitdabudhabi.ac.ae</a> &nbsp;·&nbsp; <a href="https://github.com/velluu">github.com/velluu</a> &nbsp;·&nbsp; Abu Dhabi, UAE
+</footer>
+
+</main>
+</body>
+</html>

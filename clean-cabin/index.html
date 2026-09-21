@@ -186,7 +186,7 @@
         <div>
           <p class="eyebrow">1 · The need</p>
           <h2>One system, <em>four separable problems</em></h2>
-          <p class="lede">A cited implication graph of Abu Dhabi's air pollution in the WHO DPSEEA frame. Near-decomposability (Simon and Ando 1961) finds the blocks that hold together on their own, and an exposure load ranks them.</p>
+          <p class="lede">A cited implication graph of Abu Dhabi's air pollution in the WHO DPSEEA frame. A network decomposition inspired by Simon and Ando's near-decomposability finds the blocks whose evidence hangs together, and an exposure load ranks them.</p>
         </div>
         <div class="tiles">
           <div class="tile"><div class="v num" id="t-nodes">0</div><div class="k">nodes</div></div>
@@ -198,7 +198,7 @@
         <div id="g3d"></div>
         <div class="side">
           <div class="panel reveal" id="blocks">
-            <p class="subhead">The four blocks that qualify and separate, ε<sub>sym</sub> &lt; 1</p>
+            <p class="subhead">The four candidate blocks, a lever and an outcome inside, ε<sub>sym</sub> &lt; 1</p>
             <div id="blk-list"></div>
             <div class="legend" style="margin-top:8px"><span><i style="background:#40556a"></i> other blocks and isolated nodes</span></div>
           </div>
@@ -210,7 +210,7 @@
         </div>
       </div>
       <div class="foot">
-        <div class="sources"><b>Sources.</b> 160 nodes, 337 edges, 418 rows, each row with its citation, identifier and sentence, fetched 20 Sep 2026. Loads: SCAD 2024 labour force, ADCCI 2024 pupils, Abu Dhabi Mobility 2024 school transport, Adar 2015 (597 trips, 188 buses), Adams and Réquia 2017 (86 schools), Azarmi 2016, Seagram 2019, Yuan 2020. Hover a bar for its terms.</div>
+        <div class="sources"><b>Sources.</b> 160 nodes, 337 edges, 418 rows, each row with its citation, identifier and sentence, fetched 20 Sep 2026. The four blocks survive 200 weight perturbations, dropping 10 % of lower-tier rows (school block at Jaccard ≥ 0.6 in 97 % of rebuilds) and leaving any single source out. Loads: SCAD 2024 labour force, ADCCI 2024 pupils, Abu Dhabi Mobility 2024 school transport, Adar 2015 (597 trips, 188 buses), Adams and Réquia 2017 (86 schools), Azarmi 2016, Seagram 2019, Yuan 2020. Hover a bar for its terms.</div>
         <div class="controls" data-for="s1"><button data-step="0">system</button><button data-step="1">blocks</button><button data-step="2">load</button><button class="replay">↻ replay</button></div>
       </div>
     </section>
@@ -296,7 +296,7 @@
       <div class="stage">
         <div id="rank" class="panel"><p class="subhead">The 232 survivors by weighted score, top five named</p><div id="rank-chart"></div></div>
         <div id="smaa" class="panel">
-          <p class="subhead">SMAA, the exact 10,000 draws replayed, no weight information</p>
+          <p class="subhead">SMAA over the weights, the exact 10,000 draws replayed, no weight information</p>
           <div class="big num"><span id="smaa-pct">0.0</span> %<br><small>of draws put Clean Cabin at rank 1</small></div>
           <div class="fill"><i id="smaa-fill"></i></div>
           <div id="smaa-w"></div>
@@ -305,7 +305,7 @@
             <div class="tile"><div class="v num">90.3 %</div><div class="k">centred on our weights</div></div>
             <div class="tile"><div class="v num">100 %</div><div class="k">each weight ±50 %</div></div>
           </div>
-          <p style="margin:8px 0 0; font-size:12px; color:var(--muted)">Drop any one criterion: first in all eleven cases. No other row exceeds 6.3 % at rank 1 under any scheme.</p>
+          <p style="margin:8px 0 0; font-size:12px; color:var(--muted)">Drop any one criterion: first in all eleven cases. Then shake the scores too, every one of the 232 × 11 moved by ±1 in 10,000 draws: rank 1 in <b style="color:var(--text)">48 %</b> at the stated weights, top 3 in 72 %, median rank 2. Our scores, not the weights, are the soft part, and the pick still leads.</p>
         </div>
         <div id="fmea" class="panel">
           <p class="subhead">29 failure modes of a gate-side design, by layer and severity. The fatal ones set the rules</p>
@@ -325,8 +325,8 @@
       <div class="head">
         <div>
           <p class="eyebrow">5 · The pick</p>
-          <h2>Clean Cabin, <em>a per-bus cabin air service</em></h2>
-          <p class="lede">Diagnose each bus by its cabin-to-roof ratio, fix the source, idle only while the cabin is hot, publish a grade per bus. The physics and the kit carry twenty years of measured evidence, none of it applied here.</p>
+          <h2>Clean Cabin, <em>find, fix why, verify</em></h2>
+          <p class="lede">Not a retrofit kit. A measurement-driven service: find which school buses pollute their own cabin, identify why, apply the smallest compatible source-side repair, verify with the same paired sensors. The physics carries twenty years of measured evidence, none of it applied here.</p>
         </div>
         <div class="tiles">
           <div class="tile"><div class="v num">4.11</div><div class="k">M person·µg/m³·h/day in the bus cabin, six times the gate</div></div>
@@ -336,22 +336,22 @@
         <div>
           <div id="bus" class="panel"></div>
           <div class="scale" style="margin-top:10px">
-            <div class="tile"><div class="v num" data-count="237111">0</div><div class="k">pupils on school buses</div></div>
-            <div class="tile"><div class="v num" data-count="8568">0</div><div class="k">buses</div></div>
-            <div class="tile"><div class="v num" data-count="206">0</div><div class="k">operators, 672 schools and nurseries</div></div>
+            <div class="tile"><div class="v num"><span data-count="279000">0</span>+</div><div class="k">pupils on school buses, 2026</div></div>
+            <div class="tile"><div class="v num"><span data-count="10000">0</span>+</div><div class="k">licensed buses, 2026 (8,568 in 2024)</div></div>
+            <div class="tile"><div class="v num" data-count="206">0</div><div class="k">operators, 672 schools and nurseries, 2024</div></div>
           </div>
         </div>
         <div>
           <div class="panel"><p class="subhead">Prior art, measured in-cabin reductions from the source-side kit</p><div id="art"></div></div>
           <div class="panel" style="margin-top:10px"><p class="subhead">The pilot, one term, success fixed in advance</p><div id="pilot"></div>
-            <p style="margin:6px 0 0; font-size:12px; color:var(--muted)">Success: every failing bus at or below R = 1 at idle. Read-outs: R before and after per bus, idle minutes, restart count, fuel from telematics where the operator shares it. First partner: the university's own shuttle service, to be confirmed, then one operator's twenty buses at one school.</p>
+            <p style="margin:6px 0 0; font-size:12px; color:var(--muted)">Fleet inventory first: make, year, engine, fuel, crankcase configuration, after-treatment. Success: for every flagged bus the idle cabin excess after the repair falls, paired and within-bus, into the range of the unflagged buses, and the source found is written down. The public grade and the idle timer wait for the local validation. First partner: the university's shuttle, to be confirmed, then one operator's twenty buses.</p>
           </div>
         </div>
       </div>
       <div class="foot">
         <div>
-          <div class="sources"><b>Cabin evidence.</b> Adar 2015 (cabin 20, roadway 13, ambient 7 µg/m³, 597 trips, 188 buses), Behrentz 2005, Sabin 2005, dual-tracer attribution 2011 (about half of in-cabin PM₂.₅ is the bus's own, over three quarters of that from the crankcase), Rowan for NJDEP 2008, Trenbath 2009, Pedde 2023, Zhang and Zhu 2011, Austin 2019 (2,656 Georgia buses). <b>Scale.</b> Abu Dhabi Mobility 2024: 237,111 pupils, 8,568 buses, 206 operators, 672 schools and nurseries.</div>
-          <div class="credits" style="margin-top:8px">Karthik Nambiar, Sumedh Nitin Jamsandekar, Paul Tiju Thomas · IIT Delhi Abu Dhabi, AGRL130, 21 September 2026 · <a href="report.pdf" target="_blank" rel="noopener">the paper, 15 pages</a> <a href="week2/">week 2 site, archived</a></div>
+          <div class="sources"><b>Cabin evidence.</b> Adar 2015 (cabin 20, roadway 13, ambient 7 µg/m³, 597 trips, 188 buses), Behrentz 2005, Sabin 2005, dual-tracer attribution 2011 (about half of in-cabin PM₂.₅ is the bus's own, over three quarters of that from the crankcase), Rowan for NJDEP 2008, Trenbath 2009, Pedde 2023, Zhang and Zhu 2011, Austin 2019 (2,656 Georgia buses). <b>Scale.</b> Abu Dhabi Mobility 2024: 237,111 pupils, 8,568 buses, 206 operators, 672 schools and nurseries. Abu Dhabi Mobility for 2026 to 2027, reported by Gulf News 30 Aug 2026: more than 10,000 licensed buses, more than 279,000 pupils. <b>Retrofit evidence</b> is from open-crankcase US engines of model years 1991 to 2003 (EPA verification of the Spiracle CCV, element replaced every oil change or 500 h), so the fleet's engines are recorded before any hardware.</div>
+          <div class="credits" style="margin-top:8px">Karthik Nambiar, Sumedh Nitin Jamsandekar, Paul Tiju Thomas · IIT Delhi Abu Dhabi, AGRL130, 21 September 2026 · <a href="report.pdf" target="_blank" rel="noopener">the paper, 17 pages</a> <a href="week2/">week 2 site, archived</a></div>
         </div>
         <div class="controls" data-for="s5"><button class="replay">↻ replay</button></div>
       </div>
@@ -679,9 +679,9 @@
     // SLIDE 5: the bus, the prior art, the pilot, the scale
     // =====================================================================
     function drawBus() {
-      const box = d3.select('#bus').html(''); const W = 700, H = 340;
+      const box = d3.select('#bus').html(''); const W = 700, H = 372;
       const svg = box.append('svg').attr('viewBox', `0 0 ${W} ${H}`);
-      const g = svg.append('g').attr('transform', 'translate(165,62)');
+      const g = svg.append('g').attr('transform', 'translate(165,80)');
       const body = g.append('path').attr('d', 'M0,30 q0,-30 30,-30 h370 q30,0 30,30 v120 q0,10 -10,10 h-410 q-10,0 -10,-10 z').attr('fill', 'rgba(255,255,255,0.03)').attr('stroke', TEXT).attr('stroke-width', 2).attr('stroke-linejoin', 'round');
       const win = g.append('g').selectAll('rect').data(d3.range(6)).join('rect').attr('x', i => 32 + i * 58).attr('y', 22).attr('width', 46).attr('height', 52).attr('rx', 5).attr('fill', 'rgba(75,147,239,0.10)').attr('stroke', DIM).attr('stroke-width', 1).attr('opacity', 0);
       g.append('rect').attr('x', 384).attr('y', 22).attr('width', 34).attr('height', 128).attr('rx', 4).attr('fill', 'none').attr('stroke', DIM).attr('stroke-width', 1).attr('class', 'door').attr('opacity', 0);
@@ -699,19 +699,19 @@
       const npLen = newPipe.node().getTotalLength(); newPipe.attr('stroke-dasharray', npLen).attr('stroke-dashoffset', npLen);
       const newLab = g.append('text').attr('x', -157).attr('y', -66).attr('fill', BLK[2]).style('font-size', '9.5px').attr('opacity', 0).text('tailpipe up and off side,');
       const newLab2 = g.append('text').attr('x', -157).attr('y', -54).attr('fill', BLK[2]).style('font-size', '9.5px').attr('opacity', 0).text('away from the door and the intake');
-      const kit = g.append('text').attr('x', -157).attr('y', 112).attr('fill', MUTED).style('font-size', '9.5px').attr('opacity', 0).text('leak sealing,');
-      g.append('text').attr('class', 'kit2').attr('x', -157).attr('y', 124).attr('fill', MUTED).style('font-size', '9.5px').attr('opacity', 0).text('closed-crankcase kit');
+      const kit = g.append('text').attr('x', -157).attr('y', 112).attr('fill', MUTED).style('font-size', '9.5px').attr('opacity', 0).text('the source found:');
+      g.append('text').attr('class', 'kit2').attr('x', -157).attr('y', 124).attr('fill', MUTED).style('font-size', '9.5px').attr('opacity', 0).text('leak, crankcase, intake, tailpipe');
       // ratio readout
-      const ro = svg.append('g').attr('transform', 'translate(165,262)').attr('opacity', 0);
-      ro.append('text').attr('fill', MUTED).style('font-size', '11px').text('R = C_cabin / C_roof, the background cancels');
-      const rv = ro.append('text').attr('y', 40).attr('class', 'serif').attr('fill', TEXT).style('font-size', '42px').style('font-family', 'Instrument Serif, Georgia, serif').text('R = 2.9');
-      const rs = ro.append('text').attr('y', 60).attr('fill', DIM).style('font-size', '9.5px').text('at idle: cabin 20 against ambient 7 µg/m³ (Adar 2015), the bus pollutes its own cabin');
-      bindTip(ro, () => `<b>expected signal</b> in-cabin PM₂.₅ 20 ± 18 against ambient 7 ± 5 and roadway 13 ± 12 µg/m³ over 597 trips on 188 buses (Adar 2015). R = 20 / 7 = 2.9. About half of in-cabin PM₂.₅ is the bus's own with windows closed, over three quarters of that from the crankcase (dual-tracer study 2011).`);
+      const ro = svg.append('g').attr('transform', 'translate(165,296)').attr('opacity', 0);
+      ro.append('text').attr('fill', MUTED).style('font-size', '11px').text('R = C_cabin / C_roof and Δ = C_cabin − C_roof at idle, doors closed, HVAC recirculating: the screen');
+      const rv = ro.append('text').attr('y', 40).attr('class', 'serif').attr('fill', TEXT).style('font-size', '34px').style('font-family', 'Instrument Serif, Georgia, serif').text('R = 2.9');
+      const rs = ro.append('text').attr('y', 60).attr('fill', DIM).style('font-size', '9.5px').text('expected signal: cabin 20 against ambient 7 µg/m³ (Adar 2015). A screen, not a proof: the state of the bus is logged with it');
+      bindTip(ro, () => `<b>expected signal</b> in-cabin PM₂.₅ 20 ± 18 against ambient 7 ± 5 and roadway 13 ± 12 µg/m³ over 597 trips on 188 buses (Adar 2015). R = 20 / 7 = 2.9. On two Seattle buses with windows closed, 13.4 of 26 µg/m³ in the cabin was the bus's own, 12 of that from the crankcase (Ireson 2011). An indoor-to-outdoor ratio also moves with the HVAC mode, speed, filter and passengers, so the excess Δ, the absolute cabin level and the state log are read with it, and a reference black-carbon or particle-number instrument validates 2 to 4 buses.`);
       // timer and grade badges
-      const timer = svg.append('g').attr('transform', 'translate(536,250)').attr('opacity', 0); timer.append('rect').attr('width', 158).attr('height', 46).attr('rx', 8).attr('fill', 'rgba(162,118,234,0.10)').attr('stroke', BLK[4]); timer.append('text').attr('x', 79).attr('y', 18).attr('text-anchor', 'middle').attr('fill', BLK[4]).style('font-size', '10px').style('font-weight', 700).text('climate-aware idle timer'); timer.append('text').attr('x', 79).attr('y', 32).attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', '9px').text('idle only while the cabin is hot');
-      bindTip(timer, () => `<b>no engine-off in the heat</b> the idle in Abu Dhabi is the air conditioning, so the timer keys the idle to cabin temperature, not to a clock. Rule set by failure mode F1.`);
-      const badge = svg.append('g').attr('class', 'badge').attr('transform', 'translate(80,262) scale(0)'); badge.append('rect').attr('x', -60).attr('y', -24).attr('width', 120).attr('height', 48).attr('rx', 10).attr('fill', '#fff'); badge.append('text').attr('y', -6).attr('text-anchor', 'middle').attr('fill', '#071018').style('font-size', '9px').style('letter-spacing', '0.14em').style('font-weight', 800).text('CABIN AIR GRADE'); badge.append('text').attr('y', 16).attr('text-anchor', 'middle').attr('fill', '#071018').attr('class', 'serif').style('font-size', '26px').style('font-family', 'Instrument Serif, Georgia, serif').text('B');
-      bindTip(badge, () => `<b>a grade per bus</b> follows R, printed on the bus, shown to the school and to parents. Operators buy the grade parents ask for, schools buy a contract clause they can verify. B is an example, the scale is set in the pilot.`);
+      const timer = svg.append('g').attr('transform', 'translate(536,6)').attr('opacity', 0); timer.append('rect').attr('width', 158).attr('height', 46).attr('rx', 8).attr('fill', 'rgba(162,118,234,0.10)').attr('stroke', BLK[4]); timer.append('text').attr('x', 79).attr('y', 18).attr('text-anchor', 'middle').attr('fill', BLK[4]).style('font-size', '10px').style('font-weight', 700).text('state log per reading'); timer.append('text').attr('x', 79).attr('y', 32).attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', '8px').text('idle or moving, HVAC, doors, load, T, RH, CO₂');
+      bindTip(timer, () => `<b>the state log</b> is what makes a ratio readable: a sealed bus on a dusty day reads R below 1 with its own exhaust inside, a clean bus on a clean day reads R above 1 on a few micrograms. Flagging happens at idle, doors closed, HVAC recirculating, against the fleet's spread. No engine-off in the heat (rule from failure mode F1), and the idle timer is deferred until its benefit is measured.`);
+      const badge = svg.append('g').attr('class', 'badge').attr('transform', 'translate(80,300) scale(0)'); badge.append('rect').attr('x', -60).attr('y', -24).attr('width', 120).attr('height', 48).attr('rx', 10).attr('fill', '#fff'); badge.append('text').attr('y', -6).attr('text-anchor', 'middle').attr('fill', '#071018').style('font-size', '9px').style('letter-spacing', '0.14em').style('font-weight', 800).text('DIAGNOSTIC REPORT'); badge.append('text').attr('y', 14).attr('text-anchor', 'middle').attr('fill', '#071018').attr('class', 'serif').style('font-size', '18px').style('font-family', 'Instrument Serif, Georgia, serif').text('per bus');
+      bindTip(badge, () => `<b>per-bus report</b> the three numbers before and after, the source class, the repair, its cost and consumables, and the operator gets the fleet's distribution. A public cabin-air grade comes only after the local validation, as a certificate the operator can show a school: one-off uncertainty, dust days and HVAC settings can make a single letter misleading. Likely buyer: a school writing a verifiable clause into its transport contract, or the operator answering one, to be confirmed by interviews before a sensor is bought.`);
       const bodyLen = body.node().getTotalLength(); body.attr('stroke-dasharray', bodyLen).attr('stroke-dashoffset', bodyLen);
       return { body, bodyLen, win, wheels, bay, roofS, cabS, oldPipe, oldPlume, newPipe, npLen, newLab, newLab2, kit, ro, rv, rs, timer, badge, svg };
     }
@@ -732,12 +732,12 @@
       B.bay.transition().duration(400 * d).attr('opacity', 1); B.kit.transition().duration(400 * d).attr('opacity', 1); B.svg.select('.kit2').transition().duration(400 * d).attr('opacity', 1);
       B.oldPipe.transition().duration(500 * d).attr('opacity', 0.15); B.oldPlume.transition().duration(500 * d).attr('opacity', 0);
       B.newPipe.transition().duration(900 * d).ease(d3.easeCubicOut).attr('stroke-dashoffset', 0); B.newLab.transition().delay(700 * d).duration(300 * d).attr('opacity', 1); B.newLab2.transition().delay(700 * d).duration(300 * d).attr('opacity', 1);
-      B.rs.text('after the fix, success fixed in advance: R at or below 1 at idle');
-      if (d) { const t0 = performance.now(); await new Promise(res => (function tick(now) { const p = Math.min(1, (now - t0 - 300) / 1200); if (p >= 0) B.rv.text('R ≤ ' + (2.9 - 1.9 * Math.max(0, p)).toFixed(1)); if (p < 1) requestAnimationFrame(tick); else res(); })(t0)); } else B.rv.text('R ≤ 1.0');
+      B.rs.text('after the repair: the excess Δ falls, paired and within-bus, into the range of the unflagged buses');
+      B.rv.transition().duration(400 * d).attr('opacity', 0).on('end', () => B.rv.text('verify: Δ, R, C_cabin re-read').attr('opacity', 1)); await sleep(900 * d);
       B.rv.transition().duration(300 * d).attr('fill', BLK[3]);
       await sleep(500 * d);
       B.timer.transition().duration(500 * d).attr('opacity', 1); await sleep(700 * d);
-      B.badge.transition().duration(700 * d).ease(d3.easeElasticOut.amplitude(1).period(0.45)).attr('transform', 'translate(80,262) scale(1)');
+      B.badge.transition().duration(700 * d).ease(d3.easeElasticOut.amplitude(1).period(0.45)).attr('transform', 'translate(80,300) scale(1)');
       await sleep(500 * d);
     }
     function drawArt(animate) {
@@ -759,7 +759,7 @@
       d3.range(1, 13).forEach(w => svg.append('text').attr('x', x(w - 0.5)).attr('y', 44).attr('text-anchor', 'middle').attr('fill', DIM).style('font-size', '8.5px').text(w));
       const ph = svg.selectAll('g.p').data(D.pick.pilot).join('g').attr('class', 'p');
       const r = ph.append('rect').attr('x', d => x(d.w0)).attr('y', 14).attr('height', 16).attr('rx', 3).attr('fill', d => BLK[d.block]).attr('width', 0);
-      ph.append('text').attr('x', d => x(d.w0) + 5).attr('y', 22).attr('dy', '0.35em').attr('fill', '#071018').style('font-size', '8.5px').style('font-weight', 700).text(d => d.label.split(':')[0].split(',')[0]).attr('opacity', 0).transition().delay((d, i) => 400 * T + i * 300 * T).attr('opacity', 1);
+      ph.append('text').attr('x', d => x(d.w0) + 5).attr('y', 22).attr('dy', '0.35em').attr('fill', '#071018').style('font-size', '8.5px').style('font-weight', 700).text(d => d.label.split(':')[0]).attr('opacity', 0).transition().delay((d, i) => 400 * T + i * 300 * T).attr('opacity', 1);
       bindTip(ph, d => `<b>weeks ${d.w0 + 1} to ${d.w1}</b> ${d.label}`);
       r.transition().duration(animate ? 700 : 0).delay((d, i) => i * 300 * T).ease(d3.easeCubicOut).attr('width', d => x(d.w1) - x(d.w0));
     }
